@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Framelab — AI Creative</title>
+<title>Framelab — AI Product Photography</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -440,8 +440,8 @@ footer{background:var(--ink);padding:56px 48px 36px}
   .nav-links,.nav-right{display:none}
   .hamburger{display:flex}
   section{padding:80px 20px}
-  .hero{padding:110px 20px 70px}
-  .hero-h1{font-size:clamp(38px,10vw,60px)}
+  .hero{padding:80px 20px 60px}
+  .hero-h1{font-size:clamp(48px,13vw,75px)}
   .hero-scroll{left:20px}
   .how{padding:80px 20px}
   .steps-grid{grid-template-columns:1fr;gap:40px}
@@ -478,9 +478,9 @@ nav{transform:translateZ(0)}
 <!-- Mobile nav drawer -->
 <div class="mobile-nav" id="mobileNav">
   <a href="#about" onclick="closeMobileNav()"><span data-en="About" data-es="Nosotros">About</span></a>
+  <a href="#how" onclick="closeMobileNav()"><span data-en="Process" data-es="Proceso">Process</span></a>
   <a href="#samples" onclick="closeMobileNav()"><span data-en="Samples" data-es="Ejemplos">Samples</span></a>
   <a href="#services" onclick="closeMobileNav()"><span data-en="Services" data-es="Servicios">Services</span></a>
-  <a href="#how" onclick="closeMobileNav()"><span data-en="Process" data-es="Proceso">Process</span></a>
   <a href="#faq" onclick="closeMobileNav()">FAQ</a>
   <div class="mobile-nav-bottom">
     <button class="btn btn-accent" onclick="openModal();closeMobileNav()" style="width:100%;font-size:16px;padding:16px">
@@ -498,9 +498,9 @@ nav{transform:translateZ(0)}
   <a href="#" class="logo"><span class="logo-dot"></span>Framelab</a>
   <ul class="nav-links">
     <li><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a></li>
+    <li><a href="#how"><span data-en="Process" data-es="Proceso">Process</span></a></li>
     <li><a href="#samples"><span data-en="Samples" data-es="Ejemplos">Samples</span></a></li>
     <li><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a></li>
-    <li><a href="#how"><span data-en="Process" data-es="Proceso">Process</span></a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <div class="nav-right">
@@ -526,7 +526,7 @@ nav{transform:translateZ(0)}
     <span data-en="AI-generated photos, videos, and creative assets engineered for DTC brands that need to convert — not just look good." data-es="Fotos, vídeos y assets creativos generados con IA, diseñados para marcas DTC que necesitan convertir — no solo destacar.">AI-generated photos, videos, and creative assets engineered for DTC brands that need to convert — not just look good.</span>
   </p>
   <div class="hero-cta-row">
-    <button class="btn-accent-lg" onclick="openModal()"><span data-en="Get started →" data-es="Empezar →">Get started →</span></button>
+    <button class="btn-accent-lg" onclick="smoothScrollTo('#samples')"><span data-en="See samples" data-es="Ver ejemplos">See samples</span></button>
   </div>
   <div class="hero-scroll">
     <span class="hero-scroll-line"></span>
@@ -742,9 +742,10 @@ nav{transform:translateZ(0)}
     </div>
 
   </div>
+  <div class="reveal" style="margin-top:48px;text-align:center">
+    <button class="btn-accent-lg" onclick="openModal()"><span data-en="Get a Quote" data-es="Solicitar Presupuesto">Get a Quote</span></button>
+  </div>
 </section>
-
-<!-- FAQ -->
 <div class="faq-wrap" id="faq">
   <div class="section-tag reveal"><span class="tag-line"></span>FAQ</div>
   <h2 class="reveal reveal-delay-1"><span data-en="Common questions." data-es="Preguntas frecuentes.">Common questions.</span></h2>
@@ -821,28 +822,20 @@ nav{transform:translateZ(0)}
     </div>
     <div class="footer-cols">
       <div class="footer-col">
-        <h4><span data-en="Navigate" data-es="Navegar">Navigate</span></h4>
+        <h4><span data-en="Our Work" data-es="Nuestro Trabajo">Our Work</span></h4>
         <ul>
-          <li><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a></li>
+          <li><a href="#how"><span data-en="Process" data-es="Proceso">Process</span></a></li>
           <li><a href="#samples"><span data-en="Samples" data-es="Ejemplos">Samples</span></a></li>
           <li><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a></li>
-          <li><a href="#how"><span data-en="Process" data-es="Proceso">Process</span></a></li>
-          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4><span data-en="Company" data-es="Empresa">Company</span></h4>
         <ul>
-          <li><a href="#why"><span data-en="Why Framelab" data-es="Por qué Framelab">Why Framelab</span></a></li>
+          <li><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a></li>
           <li><a href="#" onclick="openModal();return false"><span data-en="Get in touch" data-es="Contactar">Get in touch</span></a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4><span data-en="Legal" data-es="Legal">Legal</span></h4>
-        <ul>
-          <li><a href="#"><span data-en="Privacy" data-es="Privacidad">Privacy</span></a></li>
-          <li><a href="#"><span data-en="Terms" data-es="Términos">Terms</span></a></li>
-          <li><a href="#"><span data-en="Licence info" data-es="Info licencia">Licence info</span></a></li>
+          <li><a href="https://www.linkedin.com/company/framelabdesign/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
     </div>
