@@ -229,8 +229,7 @@ h2{font-size:clamp(32px,4.8vw,66px);font-weight:800;letter-spacing:-.04em;line-h
 .srv-card{background:transparent;border:none;padding:44px 40px 48px;position:relative;overflow:hidden;transition:background .3s}
 .srv-card:last-child{border-right:none}
 .srv-card::before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 5%,transparent),transparent);opacity:0;transition:opacity .35s}
-.srv-card:hover{background:rgba(255,255,255,.03)}
-.srv-card:hover::before{opacity:1}
+.srv-card:hover::before{opacity:0}
 .srv-icon{font-size:32px;margin-bottom:28px;display:block}
 .srv-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:var(--ink);padding:4px 10px;border-radius:100px;margin-bottom:18px}
 .srv-card h3{font-size:22px;font-weight:800;letter-spacing:-.03em;color:var(--dark-text);margin-bottom:14px;line-height:1.1}
@@ -279,9 +278,7 @@ h2{font-size:clamp(32px,4.8vw,66px);font-weight:800;letter-spacing:-.04em;line-h
 .testi-section h2{color:var(--dark-text)}
 .testi-section .section-tag{color:var(--dark-muted)}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px}
-.tcard{background:transparent;border:none;padding:40px 40px 40px;transition:background .28s}
-.tcard:last-child{border-right:none}
-.tcard:hover{background:rgba(255,255,255,.03)}
+.tcard{background:transparent;border:none;padding:40px 40px 40px;transition:none}
 .tstars{color:var(--accent);font-size:13px;margin-bottom:16px;letter-spacing:2px}
 .tquote{font-size:14px;line-height:1.7;color:var(--dark-muted);margin-bottom:24px}
 .tauthor{display:flex;align-items:center;gap:12px}
@@ -356,8 +353,8 @@ footer{background:var(--ink);padding:56px 48px 36px}
 
 /* ── STEPS CLEAN ────────────────────────────────────────────────── */
 .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px}
-.step{background:transparent;border:none;border-right:1px solid var(--dark-border);padding:0 36px 0 0;margin-right:36px;transition:none;position:relative;overflow:visible}
-.step:last-child{border-right:none;margin-right:0;padding-right:0}
+.step{background:transparent;border:none;padding:0 36px 0 0;margin-right:36px;transition:none;position:relative;overflow:visible}
+.step:last-child{margin-right:0;padding-right:0}
 .step::before{display:none}
 .step:hover{background:transparent}
 .step-num{font-size:clamp(52px,5.5vw,80px);font-weight:800;letter-spacing:-.06em;color:var(--accent);line-height:1;margin-bottom:24px}
@@ -422,8 +419,8 @@ footer{background:var(--ink);padding:56px 48px 36px}
   .hero-cards{display:none}
   .hero-h1{max-width:100%}
   .steps-grid{grid-template-columns:repeat(2,1fr);gap:48px 0}
-  .step{border-right:none;border-bottom:1px solid var(--dark-border);padding:0 0 36px 0;margin-right:0;margin-bottom:0}
-  .step:nth-child(odd){padding-right:24px;border-right:1px solid var(--dark-border)}
+  .step{border-bottom:none;padding:0 0 36px 0;margin-right:0;margin-bottom:0}
+  .step:nth-child(odd){padding-right:24px}
   .step:nth-child(3),.step:nth-child(4){border-bottom:none;padding-bottom:0}
   .stats-band-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -451,7 +448,7 @@ footer{background:var(--ink);padding:56px 48px 36px}
   .hero-scroll{left:20px}
   .how{padding:80px 20px}
   .steps-grid{grid-template-columns:1fr;gap:40px}
-  .step{border-right:none!important;border-bottom:1px solid var(--dark-border);padding:0 0 32px 0!important;margin-right:0!important}
+  .step{border-right:none!important;border-bottom:none!important;padding:0 0 32px 0!important;margin-right:0!important}
   .step:last-child{border-bottom:none;padding-bottom:0!important}
   .stats-band{padding:60px 20px}
   .stats-band-grid{grid-template-columns:1fr 1fr;gap:32px}
@@ -523,13 +520,13 @@ nav{transform:translateZ(0)}
 
 <!-- HERO -->
 <section class="hero">
-  <p class="hero-eyebrow"><span class="hero-eyebrow-dot"></span><span data-en="AI Creative for DTC Ecommerce" data-es="AI Creative para DTC Ecommerce">AI Creative for DTC Ecommerce</span></p>
+  <p class="hero-eyebrow"><span class="hero-eyebrow-dot"></span><span data-en="Product & Advertising" data-es="Product & Advertising">Product & Advertising</span></p>
   <h1 class="hero-h1">
-    <span data-en="AI Creative for" data-es="AI Creativa">AI Creative for</span><br>
-    <span class="hero-highlight"><span data-en="DTC Ecommerce." data-es="para Ecommerce.">DTC Ecommerce.</span></span>
+    <span data-en="AI Creative for" data-es="AI Creative">AI Creative for</span><br>
+    <span class="hero-highlight"><span data-en="Ecommerce." data-es="para ecommerce.">Ecommerce.</span></span>
   </h1>
   <p class="hero-sub">
-    <span data-en="AI-generated photos, videos, and creative assets engineered for DTC brands that need to convert — not just look good." data-es="Fotos, vídeos y assets creativos generados con IA, diseñados para marcas DTC que necesitan convertir — no solo destacar.">AI-generated photos, videos, and creative assets engineered for DTC brands that need to convert — not just look good.</span>
+    <span data-en="AI-generated product photography and advertising creatives — built for brands that need to perform, not just look good." data-es="Fotografía de producto y creatividades publicitarias generadas con IA — para marcas que necesitan convertir, no solo destacar.">AI-generated product photography and advertising creatives — built for brands that need to perform, not just look good.</span>
   </p>
   <div class="hero-cta-row">
     <button class="btn-accent-lg" onclick="smoothScrollTo('#samples')"><span data-en="See samples" data-es="Ver ejemplos">See samples</span></button>
@@ -592,8 +589,8 @@ nav{transform:translateZ(0)}
     <div>
       <div class="section-tag reveal"><span class="tag-line"></span><span data-en="What we do" data-es="Qué hacemos">What we do</span></div>
       <h2 class="reveal reveal-delay-1"><span data-en="Real products." data-es="Productos reales.">Real products.</span><br><span data-en="Unreal visuals." data-es="Imágenes increíbles.">Unreal visuals.</span></h2>
-      <p class="lead reveal reveal-delay-2" style="margin-top:22px"><span data-en="Our AI-powered studio generates professional assets indistinguishable from a high-end shoot — styled, lit, and ready to publish." data-es="Nuestro estudio de IA genera contenido profesional y de alto nivel, listo para publicar.">Our AI-powered studio generates professional photography indistinguishable from a high-end shoot — styled, lit, and ready to publish.</span></p>
-      <p class="lead reveal reveal-delay-3" style="margin-top:14px;font-size:15px"><span data-en="No location scouting. No model fees. No post-production delays. Content your customers will stop scrolling for." data-es="Sin localizaciones. Sin cachés de modelos. Sin retrasos de postproducción. Contenido por el que tus clientes detendrán el scroll.">No location scouting. No model fees. No post-production delays. Just beautiful images your customers will stop scrolling for.</span></p>
+      <p class="lead reveal reveal-delay-2" style="margin-top:22px"><span data-en="Your product, in any context, at a fraction of the cost. Packshots, lifestyle photos, detail shots and product-in-use imagery — all generated with custom AI systems, indistinguishable from a high-end shoot." data-es="Tu producto, en cualquier contexto, a una fracción del coste. Packshots, fotos de lifestyle, detalles y producto en uso — todo generado con sistemas de IA propios, indistinguible de un shoot profesional.">Your product, in any context, at a fraction of the cost. Packshots, lifestyle photos, detail shots and product-in-use imagery — all generated with custom AI systems, indistinguishable from a high-end shoot.</span></p>
+      <p class="lead reveal reveal-delay-3" style="margin-top:16px;font-size:15px"><span data-en="We also produce advertising creatives ready to run — static ads, carousels, story formats and video ads for Meta, TikTok and Google Display. One brief, every format you need to test and scale." data-es="También producimos creatividades publicitarias listas para activar — static ads, carruseles, story formats y video ads para Meta, TikTok y Google Display. Un brief, todos los formatos que necesitas para testear y escalar.">We also produce advertising creatives ready to run — static ads, carousels, story formats and video ads for Meta, TikTok and Google Display. One brief, every format you need to test and scale.</span></p>
     </div>
     <div class="about-vis reveal reveal-delay-2">
       <div style="overflow:hidden;border-radius:20px;width:100%;height:100%">
@@ -615,22 +612,22 @@ nav{transform:translateZ(0)}
     <div class="step reveal reveal-delay-1">
       <div class="step-num">01</div>
       <h3 style="font-size:clamp(20px,2vw,26px)"><span data-en="Product" data-es="Producto">Product</span></h3>
-      <p><span data-en="Send us a picture of your product. No lengthy brief required." data-es="Envíanos una foto de tu producto. Sin necesidad de un brief extenso.">Send us a picture of your product. No lengthy brief required.</span></p>
+      <p><span data-en="Send us your product — a photo or sample. That's all we need to get started." data-es="Envíanos tu producto — una foto o muestra. Es todo lo que necesitamos para empezar.">Send us your product — a photo or sample. That's all we need to get started.</span></p>
     </div>
     <div class="step reveal reveal-delay-2">
       <div class="step-num">02</div>
       <h3 style="font-size:clamp(20px,2vw,26px)"><span data-en="Brief" data-es="Brief">Brief</span></h3>
-      <p><span data-en="We align on the basics before generating any asset — copy, scenes, mood, formats, and channel intent." data-es="Alineamos los puntos clave antes de generar cualquier asset — texto, escenas, mood, formatos e intención de canal.">We align on the basics before generating any asset — scenes, mood, formats, and channel intent.</span></p>
+      <p><span data-en="Tell us what you need — formats, channels, mood, and references. We turn your brief into a precise production plan." data-es="Dinos qué necesitas — formatos, canales, mood y referencias. Convertimos tu brief en un plan de producción preciso.">Tell us what you need — formats, channels, mood, and references. We turn your brief into a precise production plan.</span></p>
     </div>
     <div class="step reveal reveal-delay-3">
       <div class="step-num">03</div>
-      <h3 style="font-size:clamp(20px,2vw,26px)"><span data-en="Generation" data-es="Generación">Generation</span></h3>
-      <p><span data-en="Your product is placed into every scene with precision — lighting matched, shadows rendered, every detail dialled in across dozens of production-ready visuals." data-es="Tu producto se coloca en cada escena con precisión — iluminación ajustada, sombras renderizadas, cada detalle perfeccionado en docenas de visuales listos para publicar.">Your product is placed into every scene with precision — lighting matched, shadows rendered, every detail dialled in across dozens of production-ready visuals.</span></p>
+      <h3 style="font-size:clamp(20px,2vw,26px)"><span data-en="Production" data-es="Producción">Production</span></h3>
+      <p><span data-en="We generate every asset — product photos, lifestyle imagery, and ad creatives — using custom AI systems built for accuracy and brand consistency." data-es="Generamos cada asset — fotos de producto, imágenes de lifestyle y creatividades publicitarias — con sistemas de IA propios diseñados para la precisión y la coherencia de marca.">We generate every asset — product photos, lifestyle imagery, and ad creatives — using custom AI systems built for accuracy and brand consistency.</span></p>
     </div>
     <div class="step reveal reveal-delay-4">
       <div class="step-num">04</div>
       <h3 style="font-size:clamp(20px,2vw,26px)"><span data-en="Delivery" data-es="Entrega">Delivery</span></h3>
-      <p><span data-en="Your gallery lands in your inbox. Choose your favourites and download everything. Commercial licence always included." data-es="Tu galería llega a tu bandeja de entrada. Elige tus favoritas y descarga todo. Licencia comercial siempre incluida.">Your gallery lands in your inbox. Choose your favourites and download everything. Commercial licence always included.</span></p>
+      <p><span data-en="Your assets land in your inbox, ready to publish or run. Commercial licence always included." data-es="Tus assets llegan a tu bandeja de entrada, listos para publicar o activar. Licencia comercial siempre incluida.">Your assets land in your inbox, ready to publish or run. Commercial licence always included.</span></p>
     </div>
   </div>
 </section>
@@ -684,7 +681,7 @@ nav{transform:translateZ(0)}
 <section class="ba-bg">
   <div class="section-tag reveal"><span class="tag-line"></span><span data-en="Proof" data-es="La prueba">Proof</span></div>
   <h2 class="reveal reveal-delay-1"><span data-en="A real" data-es="Una verdadera">A real</span><br><span data-en="difference." data-es="diferencia.">difference.</span></h2>
-  <p class="lead reveal reveal-delay-2" style="margin-top:16px;max-width:480px"><span data-en="The same product. One image taken on a plain background. One shot by Framelab. The difference is what your customer sees first." data-es="El mismo producto. Una imagen sobre fondo liso. Otra fotografiada por Framelab. La diferencia es lo que tu cliente ve primero.">The same product. One image taken on a plain background. One shot by Framelab. The difference is what your customer sees first.</span></p>
+  <p class="lead reveal reveal-delay-2" style="margin-top:16px;max-width:480px"><span data-en="The difference is what your customer sees first." data-es="La diferencia es lo que tu cliente ve primero.">The difference is what your customer sees first.</span></p>
   <div class="ba-grid">
     <div class="bacard reveal reveal-delay-2">
       <div class="bacard-top" style="background:#D0C8B8;position:relative">
@@ -702,7 +699,7 @@ nav{transform:translateZ(0)}
           <p style="margin-top:14px;font-size:11px;color:rgba(255,255,255,.75)"><span data-en="Atmospheric forest scene" data-es="Escena atmosférica de bosque">Atmospheric forest scene</span></p>
         </div>
       </div>
-      <div class="bacard-body"><h3><span data-en="The Framelab way" data-es="El método Framelab">The Framelab way</span></h3><p><span data-en="Scroll-stopping visuals built for your DTC funnel — PDPs, paid ads, social reels — delivered fast and ready to test at scale." data-es="Visuales que detienen el scroll diseñados para tu funnel DTC — PDPs, paid ads, reels — entregados rápido y listos para testear a escala.">Scroll-stopping visuals built for your DTC funnel — PDPs, paid ads, social reels — delivered fast and ready to test at scale.</span></p></div>
+      <div class="bacard-body"><h3><span data-en="The Framelab way" data-es="El método Framelab">The Framelab way</span></h3><p><span data-en="Scroll-stopping visuals built for your full funnel — PDPs, paid ads, and email — delivered fast and ready to test at scale." data-es="Visuales que detienen el scroll diseñados para tu funnel completo — PDPs, paid ads y email — entregados rápido y listos para testear a escala.">Scroll-stopping visuals built for your full funnel — PDPs, paid ads, and email — delivered fast and ready to test at scale.</span></p></div>
     </div>
   </div>
 </section>
@@ -710,40 +707,31 @@ nav{transform:translateZ(0)}
 <!-- SERVICES -->
 <section class="services-section" id="services">
   <div class="section-tag reveal"><span class="tag-line"></span><span data-en="What we make" data-es="Qué creamos">What we make</span></div>
-  <h2 class="reveal reveal-delay-1"><span data-en="Every asset your" data-es="Cada asset que">Every asset your</span><br><span data-en="DTC brand needs." data-es="tu marca DTC necesita.">DTC brand needs.</span></h2>
-  <p class="lead reveal reveal-delay-2" style="margin-top:16px;max-width:480px"><span data-en="From hero product shots to paid ad creatives — AI-generated, conversion-engineered, delivered fast." data-es="Desde shots de producto hero hasta creatividades para paid ads — generados con IA, optimizados para convertir, entregados rápido.">From hero product shots to paid ad creatives — AI-generated, conversion-engineered, delivered fast.</span></p>
-  <div class="srv-grid">
+  <h2 class="reveal reveal-delay-1"><span data-en="AI Creative." data-es="AI Creative.">AI Creative.</span><br><span data-en="Product and Advertising." data-es="Product y Advertising.">Product and Advertising.</span></h2>
+  <p class="lead reveal reveal-delay-2" style="margin-top:16px;max-width:480px"><span data-en="Product photography and advertising creatives — generated with AI, delivered fast, built to perform." data-es="Fotografía de producto y creatividades publicitarias — generadas con IA, entregadas rápido, diseñadas para rendir.">Product photography and advertising creatives — generated with AI, delivered fast, built to perform.</span></p>
+  <div class="srv-grid" style="grid-template-columns:repeat(2,1fr)">
 
     <div class="srv-card reveal reveal-delay-1">
-      <span class="srv-tag"><span data-en="Photos & Video" data-es="Fotos y Vídeo">Photos & Video</span></span>
-      <h3><span data-en="Product Visuals" data-es="Visuales de Producto">Product Visuals</span></h3>
-      <p><span data-en="Studio-quality photos and short-form video clips of your product in AI-generated scenes. Built for PDPs, email, and anywhere first impressions get made." data-es="Fotos y clips de vídeo de calidad de estudio de tu producto en escenas generadas con IA. Diseñados para PDPs, email y cualquier lugar donde se forman las primeras impresiones.">Studio-quality photos and short-form video clips of your product in AI-generated scenes. Built for PDPs, email, and anywhere first impressions get made.</span></p>
+      <span class="srv-tag">Photos</span>
+      <h3><span data-en="Product" data-es="Product">Product</span></h3>
+      <p><span data-en="Studio-quality product photography generated with AI — packshots, lifestyle, detail, and in-use imagery ready for PDPs, email, and anywhere first impressions are made." data-es="Fotografía de producto de calidad de estudio generada con IA — packshots, lifestyle, detalles y producto en uso, listos para PDPs, email y donde se forman las primeras impresiones.">Studio-quality product photography generated with AI — packshots, lifestyle, detail, and in-use imagery ready for PDPs, email, and anywhere first impressions are made.</span></p>
       <div class="srv-details">
-        <div class="srv-detail"><span data-en="High-res stills + video clips" data-es="Fotos alta resolución + clips de vídeo">High-res stills + video clips</span></div>
-        <div class="srv-detail"><span data-en="Multiple scenes & colorways" data-es="Múltiples escenas y colores">Multiple scenes & colorways</span></div>
-        <div class="srv-detail"><span data-en="PDP & email ready formats" data-es="Formatos listos para PDP y email">PDP & email ready formats</span></div>
+        <div class="srv-detail"><span data-en="Packshot / White background" data-es="Packshot / Fondo blanco">Packshot / White background</span></div>
+        <div class="srv-detail"><span data-en="Lifestyle product photos" data-es="Fotos de lifestyle">Lifestyle product photos</span></div>
+        <div class="srv-detail"><span data-en="Product detail shots" data-es="Detalles de producto">Product detail shots</span></div>
+        <div class="srv-detail"><span data-en="Product in use" data-es="Producto en uso">Product in use</span></div>
       </div>
     </div>
 
     <div class="srv-card reveal reveal-delay-2">
-      <span class="srv-tag"><span data-en="Social" data-es="Social">Social</span></span>
-      <h3><span data-en="Social Media Assets" data-es="Assets para Redes Sociales">Social Media Assets</span></h3>
-      <p><span data-en="Thumb-stopping creative for Instagram, TikTok, and Pinterest — reels, carousels, stories, and static posts formatted and ready to publish." data-es="Creatividades que detienen el pulgar para Instagram, TikTok y Pinterest — reels, carruseles, stories y posts estáticos formateados y listos para publicar.">Thumb-stopping creative for Instagram, TikTok, and Pinterest — reels, carousels, stories, and static posts formatted and ready to publish.</span></p>
+      <span class="srv-tag">Paid Media</span>
+      <h3><span data-en="Advertising" data-es="Advertising">Advertising</span></h3>
+      <p><span data-en="Performance-engineered ad creatives in every format — built to test, iterate, and scale your winners across paid channels." data-es="Creatividades publicitarias optimizadas para el rendimiento en todos los formatos — diseñadas para testear, iterar y escalar lo que funciona en canales de pago.">Performance-engineered ad creatives in every format — built to test, iterate, and scale your winners across paid channels.</span></p>
       <div class="srv-details">
-        <div class="srv-detail"><span data-en="Reels, stories & static posts" data-es="Reels, stories y posts estáticos">Reels, stories & static posts</span></div>
-        <div class="srv-detail"><span data-en="Platform-native sizing" data-es="Tamaños nativos por plataforma">Platform-native sizing</span></div>
-        <div class="srv-detail"><span data-en="On-brand & scroll-optimized" data-es="Acorde a tu marca y optimizados para el scroll">On-brand & scroll-optimized</span></div>
-      </div>
-    </div>
-
-    <div class="srv-card reveal reveal-delay-3">
-      <span class="srv-tag"><span data-en="Paid Media" data-es="Paid Media">Paid Media</span></span>
-      <h3><span data-en="Paid Media Assets" data-es="Assets para Paid Media">Paid Media Assets</span></h3>
-      <p><span data-en="High-converting ad creatives for Meta, Google, and TikTok Ads. Multiple hooks, formats, and aspect ratios — built to test, iterate, and scale your winning creatives." data-es="Creatividades de alto rendimiento para Meta, Google y TikTok Ads. Múltiples hooks, formatos y proporciones — diseñados para testear, iterar y escalar tus creatividades ganadoras.">High-converting ad creatives for Meta, Google, and TikTok Ads. Multiple hooks, formats, and aspect ratios — built to test, iterate, and scale your winning creatives.</span></p>
-      <div class="srv-details">
-        <div class="srv-detail"><span data-en="Meta, Google & TikTok ready" data-es="Listos para Meta, Google y TikTok">Meta, Google & TikTok ready</span></div>
-        <div class="srv-detail"><span data-en="Multiple hooks & formats" data-es="Múltiples hooks y formatos">Multiple hooks & formats</span></div>
-        <div class="srv-detail"><span data-en="Engineered to lower CPA" data-es="Diseñados para reducir el CPA">Engineered to lower CPA</span></div>
+        <div class="srv-detail"><span data-en="Static ads" data-es="Static ads">Static ads</span></div>
+        <div class="srv-detail"><span data-en="Carousel ads" data-es="Carousel ads">Carousel ads</span></div>
+        <div class="srv-detail"><span data-en="Story / vertical ads" data-es="Story / vertical ads">Story / vertical ads</span></div>
+        <div class="srv-detail"><span data-en="Video ads" data-es="Video ads">Video ads</span></div>
       </div>
     </div>
 
@@ -768,7 +756,7 @@ nav{transform:translateZ(0)}
         <span data-en="What types of assets do you produce?" data-es="¿Qué tipo de assets producís?">What types of assets do you produce?</span>
         <span class="faq-chevron">↓</span>
       </button>
-      <div class="faq-a"><span data-en="We cover the full creative stack for DTC brands: product photos for PDPs and email, short-form video clips, social media assets (reels, stories, carousels), and paid media creatives for Meta, Google, and TikTok Ads." data-es="Cubrimos toda la stack creativa para marcas DTC: fotos de producto para PDPs y email, clips de vídeo cortos, assets para redes sociales (reels, stories, carruseles) y creatividades para paid media en Meta, Google y TikTok Ads.">We cover the full creative stack for DTC brands: product photos for PDPs and email, short-form video clips, social media assets (reels, stories, carousels), and paid media creatives for Meta, Google, and TikTok Ads.</span></div>
+      <div class="faq-a"><span data-en="AI Creative covers two areas: Product (packshots, lifestyle photos, detail shots, and product-in-use imagery for PDPs and email) and Advertising (static ads, carousel ads, story/vertical ads, and video ads ready to run on Meta, TikTok, and Google Display)." data-es="AI Creative cubre dos áreas: Product (packshots, fotos de lifestyle, detalles y producto en uso para PDPs y email) y Advertising (static ads, carousel ads, story/vertical ads y video ads listos para Meta, TikTok y Google Display).">AI Creative covers two areas: Product (packshots, lifestyle photos, detail shots, and product-in-use imagery for PDPs and email) and Advertising (static ads, carousel ads, story/vertical ads, and video ads ready to run on Meta, TikTok, and Google Display).</span></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
@@ -794,7 +782,7 @@ nav{transform:translateZ(0)}
   <div class="testi-grid">
     <div class="tcard reveal reveal-delay-1">
       <div class="tstars">★★★★★</div>
-      <p class="tquote">"<span data-en="We switched from traditional studios and never looked back. Framelab delivers in days what used to take weeks — and our Instagram engagement literally doubled." data-es="Cambiamos los estudios tradicionales y no volvimos. Framelab entrega en días lo que antes tardaba semanas — y nuestro engagement en Instagram se duplicó.">We switched from traditional studios and never looked back. Framelab delivers in days what used to take weeks — and our Instagram engagement literally doubled.</span>"</p>
+      <p class="tquote">"<span data-en="We switched from traditional studios and never looked back. Framelab delivers in days what used to take weeks — and the quality is genuinely better." data-es="Cambiamos los estudios tradicionales y no volvimos. Framelab entrega en días lo que antes tardaba semanas — y la calidad es mejor de verdad.">We switched from traditional studios and never looked back. Framelab delivers in days what used to take weeks — and the quality is genuinely better.</span>"</p>
       <div class="tauthor"><div class="tavatar">L</div><div><div class="tname">Laura M.</div><div class="trole"><span data-en="Founder" data-es="Fundadora">Founder</span></div></div></div>
     </div>
     <div class="tcard reveal reveal-delay-2">
@@ -813,7 +801,7 @@ nav{transform:translateZ(0)}
 <!-- CTA -->
 <section class="cta-band">
   <h2 class="reveal"><span data-en="Creative that" data-es="Creative que">Creative that</span><br><span data-en="converts." data-es="convierte.">converts.</span></h2>
-  <p class="lead reveal reveal-delay-1"><span data-en="Stop draining your budget on traditional studios. Get DTC-ready visuals — product photos, video content, and paid media assets — delivered fast, at a fraction of the cost." data-es="Deja de gastar tu presupuesto en estudios tradicionales. Consigue visuales listos para DTC — fotos de producto, contenido en vídeo y assets para paid media — entregados rápido, a una fracción del coste.">Stop draining your budget on traditional studios. Get DTC-ready visuals — product photos, video content, and paid media assets — delivered fast, at a fraction of the cost.</span></p>
+  <p class="lead reveal reveal-delay-1"><span data-en="Stop overpaying for traditional production. Get AI Creative — product photography and advertising creatives — built to perform, delivered fast, at a fraction of the cost." data-es="Deja de pagar de más por producción tradicional. Consigue AI Creative — fotografía de producto y creatividades publicitarias — diseñadas para rendir, entregadas rápido, a una fracción del coste.">Stop overpaying for traditional production. Get AI Creative — product photography and advertising creatives — built to perform, delivered fast, at a fraction of the cost.</span></p>
   <div class="cta-row reveal reveal-delay-2">
     <button class="btn-accent-lg" style="background:var(--ink);color:var(--accent)" onclick="openModal()"><span data-en="Get started" data-es="Empezar">Get started</span></button>
   </div>
