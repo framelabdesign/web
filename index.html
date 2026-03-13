@@ -221,22 +221,22 @@ h2{font-size:clamp(32px,4.8vw,66px);font-weight:800;letter-spacing:-.04em;line-h
 
 
 /* ── SERVICES SECTION ──────────────────────────────────────────── */
-.services-section{background:var(--dark-bg);padding:110px 48px}
-.services-section h2{color:var(--dark-text)}
-.services-section .section-tag{color:var(--dark-muted)}
-.services-section .lead{color:var(--dark-muted)}
+.services-section{background:var(--accent);padding:110px 48px}
+.services-section h2{color:var(--ink)}
+.services-section .section-tag{color:rgba(0,0,0,.5)}
+.services-section .lead{color:rgba(0,0,0,.55)}
 .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px}
 .srv-card{background:transparent;border:none;padding:44px 40px 48px;position:relative;overflow:hidden;transition:background .3s}
 .srv-card:last-child{border-right:none}
-.srv-card::before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 5%,transparent),transparent);opacity:0;transition:opacity .35s}
-.srv-card:hover::before{opacity:0}
+.srv-card::before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,rgba(0,0,0,.06),transparent);opacity:0;transition:opacity .35s}
+.srv-card:hover::before{opacity:1}
 .srv-icon{font-size:32px;margin-bottom:28px;display:block}
-.srv-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:var(--ink);padding:4px 10px;border-radius:100px;margin-bottom:18px}
-.srv-card h3{font-size:22px;font-weight:800;letter-spacing:-.03em;color:var(--dark-text);margin-bottom:14px;line-height:1.1}
-.srv-card p{font-size:14px;color:var(--dark-muted);line-height:1.7}
+.srv-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--accent);padding:4px 10px;border-radius:100px;margin-bottom:18px}
+.srv-card h3{font-size:22px;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin-bottom:14px;line-height:1.1}
+.srv-card p{font-size:14px;color:rgba(0,0,0,.6);line-height:1.7}
 .srv-details{margin-top:24px;display:flex;flex-direction:column;gap:8px}
-.srv-detail{font-size:12px;font-weight:600;color:var(--dark-muted);display:flex;align-items:center;gap:8px;letter-spacing:.01em}
-.srv-detail::before{content:'';width:4px;height:4px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.srv-detail{font-size:12px;font-weight:600;color:rgba(0,0,0,.55);display:flex;align-items:center;gap:8px;letter-spacing:.01em}
+.srv-detail::before{content:'';width:4px;height:4px;background:var(--ink);border-radius:50%;flex-shrink:0}
 @media(max-width:900px){.srv-grid{grid-template-columns:1fr}}
 @media(max-width:768px){.services-section{padding:80px 20px}}
 .ba-bg{background:var(--bg2);padding:110px 48px}
@@ -482,7 +482,6 @@ nav{transform:translateZ(0)}
 <div class="mobile-nav" id="mobileNav">
   <a href="#about" onclick="closeMobileNav()"><span data-en="About" data-es="Nosotros">About</span></a>
   <a href="#how" onclick="closeMobileNav()"><span data-en="Process" data-es="Proceso">Process</span></a>
-  <a href="#samples" onclick="closeMobileNav()"><span data-en="Samples" data-es="Ejemplos">Samples</span></a>
   <a href="#services" onclick="closeMobileNav()"><span data-en="Services" data-es="Servicios">Services</span></a>
   <a href="#faq" onclick="closeMobileNav()">FAQ</a>
   <div class="mobile-nav-bottom">
@@ -502,7 +501,6 @@ nav{transform:translateZ(0)}
   <ul class="nav-links">
     <li><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a></li>
     <li><a href="#how"><span data-en="Process" data-es="Proceso">Process</span></a></li>
-    <li><a href="#samples"><span data-en="Samples" data-es="Ejemplos">Samples</span></a></li>
     <li><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
@@ -529,7 +527,6 @@ nav{transform:translateZ(0)}
     <span data-en="AI-generated product photography and advertising creatives — built for brands that need to perform, not just look good." data-es="Fotografía de producto y creatividades publicitarias generadas con IA — para marcas que necesitan convertir, no solo destacar.">AI-generated product photography and advertising creatives — built for brands that need to perform, not just look good.</span>
   </p>
   <div class="hero-cta-row">
-    <button class="btn-accent-lg" onclick="smoothScrollTo('#samples')"><span data-en="See samples" data-es="Ver ejemplos">See samples</span></button>
   </div>
   <div class="hero-scroll">
     <span class="hero-scroll-line"></span>
@@ -585,19 +582,12 @@ nav{transform:translateZ(0)}
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="about-split">
-    <div>
+  <div style="max-width:640px">
+
       <div class="section-tag reveal"><span class="tag-line"></span><span data-en="What we do" data-es="Qué hacemos">What we do</span></div>
       <h2 class="reveal reveal-delay-1"><span data-en="Real products." data-es="Productos reales.">Real products.</span><br><span data-en="Unreal visuals." data-es="Imágenes increíbles.">Unreal visuals.</span></h2>
       <p class="lead reveal reveal-delay-2" style="margin-top:22px"><span data-en="Your product, in any context, at a fraction of the cost. Packshots, lifestyle photos, detail shots and product-in-use imagery — all generated with custom AI systems, indistinguishable from a high-end shoot." data-es="Tu producto, en cualquier contexto, a una fracción del coste. Packshots, fotos de lifestyle, detalles y producto en uso — todo generado con sistemas de IA propios, indistinguible de un shoot profesional.">Your product, in any context, at a fraction of the cost. Packshots, lifestyle photos, detail shots and product-in-use imagery — all generated with custom AI systems, indistinguishable from a high-end shoot.</span></p>
       <p class="lead reveal reveal-delay-3" style="margin-top:16px;font-size:15px"><span data-en="We also produce advertising creatives ready to run — static ads, carousels, story formats and video ads for Meta, TikTok and Google Display. One brief, every format you need to test and scale." data-es="También producimos creatividades publicitarias listas para activar — static ads, carruseles, story formats y video ads para Meta, TikTok y Google Display. Un brief, todos los formatos que necesitas para testear y escalar.">We also produce advertising creatives ready to run — static ads, carousels, story formats and video ads for Meta, TikTok and Google Display. One brief, every format you need to test and scale.</span></p>
-    </div>
-    <div class="about-vis reveal reveal-delay-2">
-      <div style="overflow:hidden;border-radius:20px;width:100%;height:100%">
-        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;border-radius:20px">
-          <source src="video.mp4" type="video/mp4">
-        </video>
-      </div>
     </div>
   </div>
 </section>
@@ -632,77 +622,7 @@ nav{transform:translateZ(0)}
   </div>
 </section>
 
-<!-- SAMPLES -->
-<section id="samples" style="padding:110px 48px">
-  <div class="section-tag reveal"><span class="tag-line"></span><span data-en="Samples" data-es="Ejemplos">Samples</span></div>
-  <h2 class="reveal reveal-delay-1"><span data-en="Our work." data-es="Nuestro trabajo.">Our work.</span></h2>
-  <p class="lead reveal reveal-delay-2" style="margin-top:16px;max-width:500px"><span data-en="Click to view in full screen." data-es="Haz clic para ver en pantalla completa.">Click to view in full screen.</span></p>
-  <div class="samples-grid">
-    <div class="sample-item reveal reveal-delay-1" onclick="openLightbox(0)">
-      <img src="1.jpg" alt="Candle forest scene" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-    <div class="sample-item reveal reveal-delay-2" onclick="openLightbox(1)">
-      <img src="2.jpg" alt="Padel shirt sky" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-    <div class="sample-item reveal reveal-delay-3" onclick="openLightbox(2)">
-      <img src="3.jpg" alt="Serum marble" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-    <div class="sample-item reveal reveal-delay-1" onclick="openLightbox(3)">
-      <img src="4.jpg" alt="Sneaker night" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-    <div class="sample-item reveal reveal-delay-2" onclick="openLightbox(4)">
-      <img src="5.jpg" alt="Coffee warm scene" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-    <div class="sample-item reveal reveal-delay-3" onclick="openLightbox(5)">
-      <img src="6.jpg" alt="Jewelry studio" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-    <div class="sample-item reveal reveal-delay-1" onclick="openLightbox(6)">
-      <img src="7.jpg" alt="Candle warm interior" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-    <div class="sample-item reveal reveal-delay-2" onclick="openLightbox(7)">
-      <img src="8.jpg" alt="Sport forest court" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-    <div class="sample-item reveal reveal-delay-3" onclick="openLightbox(8)">
-      <img src="9.jpg" alt="Beauty dusk" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-      <div class="sample-expand">⤢</div>
-    </div>
-  </div>
-</section>
 
-<!-- BA -->
-<section class="ba-bg">
-  <div class="section-tag reveal"><span class="tag-line"></span><span data-en="Proof" data-es="La prueba">Proof</span></div>
-  <h2 class="reveal reveal-delay-1"><span data-en="A real" data-es="La verdadera">A real</span><br><span data-en="difference." data-es="diferencia.">difference.</span></h2>
-  <p class="lead reveal reveal-delay-2" style="margin-top:16px;max-width:480px"><span data-en="The difference is what your customer sees first." data-es="La diferencia es lo que tu cliente ve primero.">The difference is what your customer sees first.</span></p>
-  <div class="ba-grid">
-    <div class="bacard reveal reveal-delay-2">
-      <div class="bacard-top" style="background:#D0C8B8;position:relative">
-        <img src="before.jpg" alt="Before - plain background" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55">
-        <span class="bacard-lbl lbl-before" style="position:relative;z-index:2"><span data-en="Before" data-es="Antes">Before</span></span>
-        <div style="text-align:center;position:relative;z-index:2"><p style="margin-top:14px;font-size:11px;color:var(--muted)"><span data-en="Plain background" data-es="Fondo liso">Plain background</span></p></div>
-      </div>
-      <div class="bacard-body"><h3><span data-en="The old way" data-es="El método antiguo">The old way</span></h3><p><span data-en="Generic, flat product images that lose conversions before the customer even reads your copy. High cost, long lead times, zero flexibility for testing new creative angles." data-es="Imágenes planas y genéricas que pierden conversiones antes de que el cliente lea tu copy. Alto coste, largos plazos, cero flexibilidad para testear nuevos ángulos creativos.">Generic, flat product images that lose conversions before the customer even reads your copy. High cost, long lead times, zero flexibility for testing new creative angles.</span></p></div>
-    </div>
-    <div class="bacard reveal reveal-delay-3">
-      <div class="bacard-top sc-forest" style="position:relative">
-        <img src="about-product-01.jpg" alt="After Framelab - atmospheric scene" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-        <span class="bacard-lbl lbl-after" style="position:relative;z-index:2"><span data-en="After Framelab" data-es="Con Framelab">After Framelab</span></span>
-        <div style="z-index:2;position:relative;text-align:center">
-          <p style="margin-top:14px;font-size:11px;color:rgba(255,255,255,.75)"><span data-en="Atmospheric forest scene" data-es="Escena atmosférica de bosque">Atmospheric forest scene</span></p>
-        </div>
-      </div>
-      <div class="bacard-body"><h3><span data-en="The Framelab way" data-es="El método Framelab">The Framelab way</span></h3><p><span data-en="Scroll-stopping visuals built for your full funnel — PDPs, paid ads, and email — delivered fast and ready to test at scale." data-es="Visuales que detienen el scroll diseñados para tu funnel completo — PDPs, paid ads y email — entregados rápido y listos para testear a escala.">Scroll-stopping visuals built for your full funnel — PDPs, paid ads, and email — delivered fast and ready to test at scale.</span></p></div>
-    </div>
-  </div>
-</section>
 
 <!-- SERVICES -->
 <section class="services-section" id="services">
@@ -712,7 +632,7 @@ nav{transform:translateZ(0)}
   <div class="srv-grid" style="grid-template-columns:repeat(2,1fr)">
 
     <div class="srv-card reveal reveal-delay-1">
-      <span class="srv-tag">Visuals</span>
+      <span class="srv-tag">Photos</span>
       <h3><span data-en="Product" data-es="Product">Product</span></h3>
       <p><span data-en="Studio-quality product photography generated with AI — packshots, lifestyle, detail, and in-use imagery ready for PDPs, email, and anywhere first impressions are made." data-es="Fotografía de producto de calidad de estudio generada con IA — packshots, lifestyle, detalles y producto en uso, listos para PDPs, email y donde se forman las primeras impresiones.">Studio-quality product photography generated with AI — packshots, lifestyle, detail, and in-use imagery ready for PDPs, email, and anywhere first impressions are made.</span></p>
       <div class="srv-details">
@@ -737,7 +657,7 @@ nav{transform:translateZ(0)}
 
   </div>
   <div class="reveal" style="margin-top:48px;text-align:center">
-    <button class="btn-accent-lg" onclick="openModal()"><span data-en="Get a Quote" data-es="Solicitar Presupuesto">Get a Quote</span></button>
+    <button class="btn-accent-lg" style="background:var(--ink);color:var(--accent)" onclick="openModal()"><span data-en="Get a Quote" data-es="Solicitar Presupuesto">Get a Quote</span></button>
   </div>
 </section>
 <div class="faq-wrap" id="faq">
@@ -753,7 +673,7 @@ nav{transform:translateZ(0)}
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span data-en="What types of assets do you produce?" data-es="¿Qué tipo de assets producen?">What types of assets do you produce?</span>
+        <span data-en="What types of assets do you produce?" data-es="¿Qué tipo de assets producís?">What types of assets do you produce?</span>
         <span class="faq-chevron">↓</span>
       </button>
       <div class="faq-a"><span data-en="AI Creative covers two areas: Product (packshots, lifestyle photos, detail shots, and product-in-use imagery for PDPs and email) and Advertising (static ads, carousel ads, story/vertical ads, and video ads ready to run on Meta, TikTok, and Google Display)." data-es="AI Creative cubre dos áreas: Product (packshots, fotos de lifestyle, detalles y producto en uso para PDPs y email) y Advertising (static ads, carousel ads, story/vertical ads y video ads listos para Meta, TikTok y Google Display).">AI Creative covers two areas: Product (packshots, lifestyle photos, detail shots, and product-in-use imagery for PDPs and email) and Advertising (static ads, carousel ads, story/vertical ads, and video ads ready to run on Meta, TikTok, and Google Display).</span></div>
@@ -801,7 +721,7 @@ nav{transform:translateZ(0)}
 <!-- CTA -->
 <section class="cta-band">
   <h2 class="reveal"><span data-en="Creative that" data-es="Creative que">Creative that</span><br><span data-en="converts." data-es="convierte.">converts.</span></h2>
-  <p class="lead reveal reveal-delay-1"><span data-en="Stop overpaying for traditional production. Get AI Creative — product photography and advertising creatives — built to perform, delivered fast, at a fraction of the cost." data-es="Deja de pagar de más por producción tradicional. Consigue AI Creative — fotografía de producto y creatividades publicitarias — diseñadas para rendir, entregadas rápido, a una fracción del costo.">Stop overpaying for traditional production. Get AI Creative — product photography and advertising creatives — built to perform, delivered fast, at a fraction of the cost.</span></p>
+  <p class="lead reveal reveal-delay-1"><span data-en="Stop overpaying for traditional production. Get AI Creative — product photography and advertising creatives — built to perform, delivered fast, at a fraction of the cost." data-es="Deja de pagar de más por producción tradicional. Consigue AI Creative — fotografía de producto y creatividades publicitarias — diseñadas para rendir, entregadas rápido, a una fracción del coste.">Stop overpaying for traditional production. Get AI Creative — product photography and advertising creatives — built to perform, delivered fast, at a fraction of the cost.</span></p>
   <div class="cta-row reveal reveal-delay-2">
     <button class="btn-accent-lg" style="background:var(--ink);color:var(--accent)" onclick="openModal()"><span data-en="Get started" data-es="Empezar">Get started</span></button>
   </div>
@@ -819,7 +739,6 @@ nav{transform:translateZ(0)}
         <h4><span data-en="Our Work" data-es="Nuestro Trabajo">Our Work</span></h4>
         <ul>
           <li><a href="#how"><span data-en="Process" data-es="Proceso">Process</span></a></li>
-          <li><a href="#samples"><span data-en="Samples" data-es="Ejemplos">Samples</span></a></li>
           <li><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a></li>
         </ul>
       </div>
