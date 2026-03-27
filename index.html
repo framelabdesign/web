@@ -225,8 +225,8 @@ h2{font-size:clamp(32px,4.8vw,66px);font-weight:800;letter-spacing:-.04em;line-h
 .services-section h2{color:var(--ink)}
 .services-section .section-tag{color:rgba(0,0,0,.5)}
 .services-section .lead{color:rgba(0,0,0,.55)}
-.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px}
-.srv-card{background:transparent;border:none;padding:44px 40px 48px;position:relative;overflow:hidden;transition:background .3s}
+
+.srv-card{background:transparent;border:1.5px solid rgba(0,0,0,.13);border-radius:18px;padding:44px 40px 48px;position:relative;overflow:hidden;transition:background .3s}
 .srv-card:last-child{border-right:none}
 .srv-card::before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,rgba(0,0,0,.06),transparent);opacity:0;transition:opacity .35s}
 .srv-card:hover::before{opacity:1}
@@ -237,7 +237,10 @@ h2{font-size:clamp(32px,4.8vw,66px);font-weight:800;letter-spacing:-.04em;line-h
 .srv-details{margin-top:24px;display:flex;flex-direction:column;gap:8px}
 .srv-detail{font-size:12px;font-weight:600;color:rgba(0,0,0,.55);display:flex;align-items:center;gap:8px;letter-spacing:.01em}
 .srv-detail::before{content:'';width:4px;height:4px;background:var(--ink);border-radius:50%;flex-shrink:0}
-@media(max-width:900px){.srv-grid{grid-template-columns:1fr}}
+.srv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:56px}
+.srv-grid+.srv-grid{margin-top:18px}
+@media(max-width:768px){.srv-grid{grid-template-columns:1fr!important}}
+@media(max-width:768px){.srv-card{border-right:none}}
 @media(max-width:768px){.services-section{padding:80px 20px}}
 .ba-bg{background:var(--bg2);padding:110px 48px}
 .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
@@ -428,7 +431,6 @@ footer{background:var(--ink);padding:56px 48px 36px}
   .services-grid{grid-template-columns:repeat(2,1fr)}
   .testi-grid{grid-template-columns:1fr}
   .tcard{border-right:none}
-  .srv-grid{grid-template-columns:1fr}
   .srv-card{border-right:none}
   .pricing-grid{grid-template-columns:1fr}
   .pcard.featured{transform:none}
@@ -628,12 +630,13 @@ nav{transform:translateZ(0)}
 <section class="services-section" id="services">
   <div class="section-tag reveal"><span class="tag-line"></span><span data-en="What we build" data-es="Qué construimos">What we build</span></div>
   <h2 class="reveal reveal-delay-1"><span data-en="Ecommerce Solutions." data-es="Soluciones Ecommerce.">Ecommerce Solutions.</span><br><span data-en="End to end." data-es="De principio a fin.">End to end.</span></h2>
-  <div class="srv-grid" style="grid-template-columns:repeat(2,1fr)">
 
+
+  <div class="srv-grid">
     <div class="srv-card reveal reveal-delay-1">
-      <span class="srv-tag">Shopify</span>
+      <span class="srv-tag">Ecommerce</span>
       <h3><span data-en="Custom Stores" data-es="Tiendas Personalizadas">Custom Stores</span></h3>
-      <p><span data-en="Fully bespoke Shopify stores built around your brand — custom themes, optimised checkout flows, app integrations, and conversion-focused UX from the ground up." data-es="Tiendas Shopify completamente a medida construidas alrededor de tu marca — temas personalizados, flujos de checkout optimizados, integraciones de apps y UX orientada a la conversión desde cero.">Fully bespoke Shopify stores built around your brand — custom themes, optimised checkout flows, app integrations, and conversion-focused UX from the ground up.</span></p>
+      <p><span data-en="Full stores built around your brand — custom themes, optimised checkout flows, app integrations, and conversion-focused UX from the ground up." data-es="Tiendas completas construidas alrededor de tu marca — temas personalizados, flujos de checkout optimizados, integraciones de apps y UX orientada a la conversión desde cero.">Full stores built around your brand — custom themes, optimised checkout flows, app integrations, and conversion-focused UX from the ground up.</span></p>
       <div class="srv-details">
         <div class="srv-detail"><span data-en="Custom Shopify theme development" data-es="Desarrollo de tema Shopify personalizado">Custom Shopify theme development</span></div>
         <div class="srv-detail"><span data-en="Checkout & conversion optimisation" data-es="Checkout y optimización de conversión">Checkout & conversion optimisation</span></div>
@@ -641,7 +644,6 @@ nav{transform:translateZ(0)}
         <div class="srv-detail"><span data-en="Post-launch support" data-es="Soporte post-lanzamiento">Post-launch support</span></div>
       </div>
     </div>
-
     <div class="srv-card reveal reveal-delay-2">
       <span class="srv-tag">Conversion</span>
       <h3><span data-en="Landing Pages" data-es="Landing Pages">Landing Pages</span></h3>
@@ -653,9 +655,7 @@ nav{transform:translateZ(0)}
         <div class="srv-detail"><span data-en="A/B testing ready" data-es="Listo para pruebas A/B">A/B testing ready</span></div>
       </div>
     </div>
-  </div>
-  <div class="srv-grid" style="grid-template-columns:repeat(2,1fr);margin-top:2px">
-    <div class="srv-card reveal reveal-delay-1">
+    <div class="srv-card reveal reveal-delay-3">
       <span class="srv-tag">AI</span>
       <h3><span data-en="AI Implementations" data-es="Implementaciones de IA">AI Implementations</span></h3>
       <p><span data-en="Smart AI integrations wired directly into your store — product recommendation engines, AI-driven search, chatbots, personalisation, and automation workflows that run on autopilot." data-es="Integraciones de IA conectadas directamente a tu tienda — motores de recomendación, búsqueda impulsada por IA, chatbots, personalización y flujos de automatización en piloto automático.">Smart AI integrations wired directly into your store — product recommendation engines, AI-driven search, chatbots, personalisation, and automation workflows that run on autopilot.</span></p>
@@ -666,7 +666,7 @@ nav{transform:translateZ(0)}
         <div class="srv-detail"><span data-en="Personalisation & segmentation" data-es="Personalización y segmentación">Personalisation & segmentation</span></div>
       </div>
     </div>
-    <div class="srv-card reveal reveal-delay-2">
+    <div class="srv-card reveal reveal-delay-4">
       <span class="srv-tag">Assets</span>
       <h3><span data-en="Creative Assets" data-es="Assets Creativos">Creative Assets</span></h3>
       <p><span data-en="Product photography, lifestyle imagery, and ad creatives generated with AI — packshots, PDPs, banners, and paid media assets ready to populate your store and run on day one." data-es="Fotografía de producto, imágenes de lifestyle y creatividades publicitarias generadas con IA — packshots, PDPs, banners y assets de paid media listos para poblar tu tienda desde el primer día.">Product photography, lifestyle imagery, and ad creatives generated with AI — packshots, PDPs, banners, and paid media assets ready to populate your store and run on day one.</span></p>
@@ -677,6 +677,7 @@ nav{transform:translateZ(0)}
         <div class="srv-detail"><span data-en="Paid media & ad creatives" data-es="Paid media y creatividades publicitarias">Paid media & ad creatives</span></div>
       </div>
     </div>
+  </div>
   <div class="reveal" style="margin-top:48px;text-align:center">
     <button class="btn-accent-lg" style="background:var(--ink);color:var(--accent)" onclick="openModal()"><span data-en="Get a Quote" data-es="Solicitar Presupuesto">Get a Quote</span></button>
   </div>
